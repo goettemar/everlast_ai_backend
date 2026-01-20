@@ -1,5 +1,8 @@
 # Everlast AI Backend
 
+**Status:** Final
+
+
 Standalone KI-Server für lokale LLM-Generierung (Ollama) und Audio-Transkription (faster-whisper).
 
 ## Features
