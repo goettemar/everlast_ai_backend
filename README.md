@@ -26,6 +26,8 @@ Ein standalone KI-Server für **lokale LLM-Generierung** (Ollama) und **Audio-Tr
 
 ## Schnellstart
 
+### Linux / macOS
+
 ```bash
 # Repository klonen
 git clone https://github.com/goettemar/everlast_ai_backend.git
@@ -33,6 +35,17 @@ cd everlast_ai_backend
 
 # Server starten (interaktives Setup beim ersten Mal)
 ./start.sh
+```
+
+### Windows
+
+```powershell
+# Repository klonen
+git clone https://github.com/goettemar/everlast_ai_backend.git
+cd everlast_ai_backend
+
+# Server starten (interaktives Setup beim ersten Mal)
+start.bat
 ```
 
 Das Start-Skript:
@@ -57,10 +70,16 @@ Das Start-Skript:
 
 ### Ollama (für LLM)
 
-Wird automatisch vom Start-Skript installiert, oder manuell:
+**Linux/macOS:** Wird automatisch vom Start-Skript installiert, oder manuell:
 
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
+ollama pull deepseek-r1:8b
+```
+
+**Windows:** Installer von [ollama.com/download/windows](https://ollama.com/download/windows) herunterladen und installieren, dann:
+
+```powershell
 ollama pull deepseek-r1:8b
 ```
 
@@ -120,11 +139,20 @@ Umgebungsvariablen (oder `.env`-Datei):
 
 ### Kommandozeilen-Optionen
 
+**Linux/macOS:**
 ```bash
 ./start.sh              # Normaler Start
 ./start.sh --setup      # Setup erneut ausführen
 ./start.sh --reset      # Setup zurücksetzen
 ./start.sh --help       # Hilfe anzeigen
+```
+
+**Windows:**
+```powershell
+start.bat               # Normaler Start
+start.bat --setup       # Setup erneut ausführen
+start.bat --reset       # Setup zurücksetzen
+start.bat --help        # Hilfe anzeigen
 ```
 
 ---
