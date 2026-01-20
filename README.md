@@ -37,7 +37,9 @@ cd everlast_ai_backend
 ./start.sh
 ```
 
-### Windows
+### Windows (Beta)
+
+> **Hinweis:** Die Windows-Version wurde nicht ausführlich getestet und gilt als Beta. Feedback und Bug-Reports sind willkommen!
 
 ```powershell
 # Repository klonen
