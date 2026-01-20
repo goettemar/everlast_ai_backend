@@ -6,14 +6,14 @@ fastapi>=0.109.0
 uvicorn>=0.27.0
 
 # Data Validation
-pydantic>=2.0.0
+pydantic>=2.4.0
 pydantic-settings>=2.0.0
 
 # HTTP Client (für Ollama)
 httpx>=0.26.0
 
 # File Upload
-python-multipart>=0.0.6
+python-multipart>=0.0.18
 
 # STT Engine
 faster-whisper>=1.0.0

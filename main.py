@@ -54,8 +54,13 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS konfigurieren
-cors_origins = settings.cors_origins.split(",") if settings.cors_origins != "*" else ["*"]
+# CORS konfigurieren - Standard: nur localhost für Sicherheit
+# Für Zugriff von anderen Geräten: CORS_ORIGINS="http://192.168.1.100:3000"
+cors_origins = (
+    settings.cors_origins.split(",")
+    if settings.cors_origins != "*"
+    else ["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:8080"]
+)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=cors_origins,

@@ -30,11 +30,9 @@ EVERLAST_AI_DIR="${EVERLAST_AI_DIR:-$HOME/projekte/everlast_ai}"
 SETUP_MARKER="$SCRIPT_DIR/.setup_complete"
 
 # Parameter verarbeiten
-FORCE_SETUP=false
 while [[ $# -gt 0 ]]; do
     case $1 in
         --setup|--reset)
-            FORCE_SETUP=true
             rm -f "$SETUP_MARKER"
             shift
             ;;

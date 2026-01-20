@@ -8,7 +8,6 @@ import logging
 import tempfile
 import asyncio
 from pathlib import Path
-from typing import Optional
 from concurrent.futures import ThreadPoolExecutor
 
 from config import settings

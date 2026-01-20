@@ -4,7 +4,6 @@ Everlast AI Backend - Konfiguration
 Zentrale Konfiguration für lokales KI-Backend mit GPU-Profilen.
 """
 
-import os
 from typing import Optional
 from pydantic_settings import BaseSettings
 from pydantic import Field
@@ -80,7 +79,8 @@ class Settings(BaseSettings):
     """Backend-Konfiguration mit Environment-Variable Support."""
 
     # Server
-    host: str = Field(default="0.0.0.0", alias="BACKEND_HOST")
+    # 0.0.0.0 ist bewusst gewählt für Zugriff von anderen Geräten im lokalen Netzwerk
+    host: str = Field(default="0.0.0.0", alias="BACKEND_HOST")  # nosec B104
     port: int = Field(default=8080, alias="BACKEND_PORT")
 
     # Ollama
